@@ -13,22 +13,28 @@ Git
 Expo Go app installed on your physical mobile device, or an Android/iOS Emulator set up.
 
 Getting Started via GitHub
-1. Clone the Repository
+# 1. Clone the Repository
 Open your terminal and clone the repository from GitHub:
 
 Bash
 git clone https://github.com/your-username/medsync.git
 cd medsync
-2. Install Dependencies
+# 2. Install Dependencies
 Install all required project packages using npm:
 
 Bash
 npm install
-3. Environment Variables Configuration
+# 3. Environment Variables Configuration
 Create a .env file in the root directory of your project to connect to your backend API server. Add your API URL:
 
 Code snippet
-EXPO_PUBLIC_API_URL=https://your-backend-api-url.com/
+EXPO_PUBLIC_API_URL=https://api.ashumyself.in/medsync/api/
+here YOU can use two things one is my backend that is deployed on https://api.ashumyself.in/medsync/api/
+2nd step 
+clone the backend and run the command ipconfig get ip address of your laptop on which backend is running and do 
+EXPO_PUBLIC_API_URL=EXPO_PUBLIC_API_URL=http://<ip_adress>:<port>/api/
+
+
 Running the Project
 Start the Development Server
 To start the Expo development server with cache cleared, run:
