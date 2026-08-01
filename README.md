@@ -38,13 +38,14 @@ EXPO_PUBLIC_API_URL=EXPO_PUBLIC_API_URL=http://<ip_adress>:<port>/api/
 Running the Project
 Start the Development Server
 To start the Expo development server with cache cleared, run:
-
+# running the frontend
 Bash
 npx expo start -c
 Using a Physical Device: Scan the QR code displayed in your terminal using the Expo Go app (Android) or the Camera app (iOS).
 
 Using an Emulator: Press a in the terminal for Android Emulator or i for iOS Simulator.
 
+# for build version
 Building the APK (Android)
 To generate an Android APK using EAS Build, make sure you have the EAS CLI installed and logged into your Expo account:
 
