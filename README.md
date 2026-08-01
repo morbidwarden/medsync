@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+MedSync - Healthcare Mobile Application
+MedSync is a full-stack healthcare mobile application built with React Native, Expo Router, Redux Toolkit (RTK Query), and a Node.js backend. It features role-based workflows for both Patients and Doctors, secure authentication, appointment booking, and availability scheduling.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Prerequisites
+Before setting up the project locally, ensure you have the following installed on your machine:
 
-## Get started
+Node.js (LTS version recommended)
 
-1. Install dependencies
+npm or yarn
 
-   ```bash
-   npm install
-   ```
+Git
 
-2. Start the app
+Expo Go app installed on your physical mobile device, or an Android/iOS Emulator set up.
 
-   ```bash
-   npx expo start
-   ```
+Getting Started via GitHub
+1. Clone the Repository
+Open your terminal and clone the repository from GitHub:
 
-In the output, you'll find options to open the app in a
+Bash
+git clone https://github.com/your-username/medsync.git
+cd medsync
+2. Install Dependencies
+Install all required project packages using npm:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Bash
+npm install
+3. Environment Variables Configuration
+Create a .env file in the root directory of your project to connect to your backend API server. Add your API URL:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Code snippet
+EXPO_PUBLIC_API_URL=https://your-backend-api-url.com/
+Running the Project
+Start the Development Server
+To start the Expo development server with cache cleared, run:
 
-## Get a fresh project
+Bash
+npx expo start -c
+Using a Physical Device: Scan the QR code displayed in your terminal using the Expo Go app (Android) or the Camera app (iOS).
 
-When you're ready, run:
+Using an Emulator: Press a in the terminal for Android Emulator or i for iOS Simulator.
 
-```bash
-npm run reset-project
-```
+Building the APK (Android)
+To generate an Android APK using EAS Build, make sure you have the EAS CLI installed and logged into your Expo account:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Install EAS CLI (if not already installed):
 
-## Learn more
+Bash
+npm install -g eas-cli
+Log in to your Expo account:
 
-To learn more about developing your project with Expo, look at the following resources:
+Bash
+eas login
+Trigger the preview build for Android:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Bash
+eas build --platform android --profile preview
+Tech Stack
+Framework: React Native, Expo (Expo Router)
 
-## Join the community
+State Management: Redux Toolkit & RTK Query
 
-Join our community of developers creating universal apps.
+Storage: Redux Persist, Expo SecureStore, AsyncStorage
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+UI Components: React Native Vector Icons, React Native Community DateTimePicker
